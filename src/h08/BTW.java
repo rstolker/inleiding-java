@@ -28,6 +28,7 @@ public class BTW extends Applet {
 
     }
 
+
     public void paint(Graphics g) {
         totaal = getal/100*121;
         g.drawString("De prijs met BTW = " + totaal, 50, 60 );

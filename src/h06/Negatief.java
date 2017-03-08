@@ -20,6 +20,7 @@ public class Negatief extends Applet {
 
 
 
+
     }
 
 

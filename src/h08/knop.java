@@ -50,6 +50,7 @@ public class knop extends Applet {
             s = "";
             repaint();
 
+
         }
     }
 }

@@ -67,6 +67,7 @@ public class BezoekersKnop extends Applet {
 
     }
 
+
     class KnopListener2 implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             vrouwen++;

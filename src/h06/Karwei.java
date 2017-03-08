@@ -22,5 +22,6 @@ public class Karwei extends Applet {
         g.drawString("Jeannette krijgt: " + uitkomst, 20, 50);
         g.drawString("Rico krijgt: " + uitkomst, 20, 65);
 
+
     }
 }

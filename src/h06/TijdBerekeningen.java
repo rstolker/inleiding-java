@@ -34,6 +34,7 @@ public class TijdBerekeningen extends Applet {
 
 
 
+
 //in een uur zitten 60 minuten.
 //in 1 minuut zitten 60 seconden dus 60 x 60 = 3600
 // 3600 sec = 1 uur
