@@ -23,6 +23,7 @@ public class Rekenmachiene2 extends Applet {
     double ansm;
     double ansk;
     double ansd;
+    
 
     public void init() {
         tekstvak1 = new TextField("", 20);

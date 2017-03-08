@@ -7,51 +7,86 @@ import java.awt.event.*;
 
 
 public class BezoekersKnop extends Applet {
-    TextField tekstvak;
-    Label label;
-    String s;
     Button knop;
-    Button knopTest;
-
+    Button knopm;
+    Button knopv;
+    Button knoppm;
+    Button knoppv;
+    int mannen = 0;
+    int vrouwen;
+    int pm;
+    int pv;
+    int totaal;
 
     public void init() {
-        setBackground(Color.red);
+        setBackground(Color.white);
+        mannen = 0;
         {
 
-            knop = new Button();
-            knop.setLabel("Mannen");
-            add(knop);
+            knopm = new Button();
+            knopm.setLabel("mannen");
+            KnopListenerm aa = new KnopListenerm();
+            knopm.addActionListener(aa);
+            add(knopm);
 
-            knop = new Button();
-            knop.setLabel("Vrouwen");
-            add(knop);
+            knopv = new Button();
+            knopv.setLabel("vrouwen");
+            add(knopv);
+            KnopListener2 bb = new KnopListener2();
+            knopv.addActionListener(bb);
 
-            knop = new Button();
-            knop.setLabel("Potentele Mannen");
-            add(knop);
+            knoppm = new Button();
+            knoppm.setLabel("Potentiële vrouwen");
+            KnopListener3 cc = new KnopListener3();
+            knoppm.addActionListener(cc);
+            add(knoppm);
 
-            knop = new Button();
-            knop.setLabel("Bereken aantal mensen");
-            add(knop);
+            knoppv = new Button();
+            knoppv.setLabel("potentiële mannen");
+            KnopListener4 dd = new KnopListener4();
+            knoppv.addActionListener(dd);
+            add(knoppv);
+
         }
     }
+
     public void paint(Graphics g) {
+        totaal = vrouwen + mannen + pv + pm;
+        g.drawString("vrouwen: " + vrouwen, 10, 55);
+        g.drawString("mannen: " + mannen, 10, 70);
+        g.drawString("potentiële vrouwen: " + pv, 10, 85);
+        g.drawString("potentiële mannen: " + pm, 10, 100);
+        g.drawString("Totaal: " +totaal, 10, 120);
+    }
 
+    class KnopListenerm implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            mannen++;
+            repaint();
+    }
 
-        g.drawString("vrouwen", 100, 45 );
-        g.drawString("mannen", 100, 60 );
-        g.drawString("potentiële vrouwen", 100, 75 );
-        g.drawString("potentiële mannen", 100, 90);
-        g.drawString("Totaal", 100, 110 );
-        class TekstvakListener implements ActionListener {
-            public void actionPerformed(ActionEvent e) {
-                s = tekstvak.getText();
-                repaint();
-            }
+    }
+
+    class KnopListener2 implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            vrouwen++;
+            repaint();
+        }
+
+    }
+
+    class KnopListener3 implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            pv++;
+            repaint();
         }
     }
+
+    class KnopListener4 implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            pm++;
+            repaint();
+        }
+    }
+
 }
-
-
-
-
