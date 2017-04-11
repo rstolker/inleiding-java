@@ -40,7 +40,7 @@ public class knop extends Applet {
 
     class KnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            s = tekstvak.getText();
+
             repaint();
 
         }
