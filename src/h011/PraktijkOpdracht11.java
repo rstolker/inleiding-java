@@ -29,7 +29,6 @@ public class PraktijkOpdracht11 extends Applet {
 
 
 
-
     public void paint(Graphics g) {
         int x = 50;
         int y = 50;
