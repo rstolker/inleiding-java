@@ -14,8 +14,8 @@ public class Staafdiagram extends Applet {
     int nulpunt, yas_valerie, yas_jeroen, yas_hans;
 public void init() {
         hoogtevalerie = 100;    //dit is KG van Valerie
-        hoogtejeroen = 80;      //dit is KG van Jeroen
-        hoogtehans = 60;        //dit is de KG van hans
+        hoogtejeroen = 100;      //dit is KG van Jeroen
+        hoogtehans = 100;        //dit is de KG van hans
         nulpunt=200;            //hier begint de tabbel
         yas_valerie=nulpunt - hoogtevalerie;
         yas_jeroen=nulpunt - hoogtejeroen;
