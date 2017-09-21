@@ -29,7 +29,7 @@ public class Meerderekaartendelen extends Applet {
 
 
     public void init(){
-        setSize(800, 800);
+        setSize(800, 400);
         button();
 
         Kaartsoorten[0] = "schoppen";
@@ -53,7 +53,7 @@ public class Meerderekaartendelen extends Applet {
     }
 
     public void button() {
-        knop = new Button("Klik hier");
+        knop = new Button("Share Cards");
         knop.addActionListener(new KnopListener1());
         add(knop);
     }
@@ -99,14 +99,17 @@ public class Meerderekaartendelen extends Applet {
                 player1Y += 30;
                 g.drawString(deelKleuren() + " " + deelKaarten(), 50, player1Y);
             }
+            //player2
             for (int i = 0; i < 13; i++) {
                 player2Y += 30;
                 g.drawString(deelKleuren() + " " + deelKaarten(), player2x, player2Y);
             }
+            //player2
             for (int i = 0; i < 13; i++) {
                 player3Y += 30;
                 g.drawString(deelKleuren() + " " + deelKaarten(), player3x, player3Y);
             }
+            //player4
             for (int i = 0; i < 13; i++) {
                 player4Y += 30;
                 g.drawString(deelKleuren() + " " + deelKaarten(), player4x, player4Y);
